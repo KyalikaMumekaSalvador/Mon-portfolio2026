@@ -91,3 +91,10 @@ a.active::after {
     width: 100%;
 
 }
+.hero img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: ;
+}
