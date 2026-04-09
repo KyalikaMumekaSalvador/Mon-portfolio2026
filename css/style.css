@@ -260,3 +260,156 @@ footer a:hover {
     color: var(--orange-vif);
     transition: translatey(-3px);
 }
+
+/* --- SECTION CONTACT --- */
+.contact-container {
+    max-width: 1100px;
+    margin: 6rem auto;
+    padding: 3.5rem;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+/* Disposition en deux colonnes */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Formulaire légèrement plus large */
+    gap: 4rem;
+    margin-top: 3rem;
+    align-items: start;
+}
+
+/* --- COLONNE GAUCHE : FORMULAIRE --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: var(--gris-tres-fonce);
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    padding: 14px 18px;
+    border: 2px solid var(--gris-clair);
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: var(--gris-tres-clair);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--violet-doux);
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.1);
+}
+
+.btn-submit {
+    margin-top: 1rem;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--violet-doux), var(--violet-fonce));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+/* --- COLONNE DROITE : INFOS & RESEAUX --- */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--gris-tres-clair);
+    border-radius: 15px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.info-item i {
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    color: var(--violet-doux);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-size: 1.2rem;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--gris-fonce);
+}
+
+/* Boutons WhatsApp & Telegram */
+.social-apps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-apps a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.social-apps a i {
+    font-size: 1.4rem;
+}
+
+.social-apps a:first-child { background-color: #25D366; } /* WhatsApp */
+.social-apps a:last-child { background-color: #0088cc; }  /* Telegram */
+
+.social-apps a:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+/* --- RESPONSIVE (MOBILE) --- */
+@media (max-width: 850px) {
+    .contact-content {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        gap: 3rem;
+    }
+    
+    .contact-container {
+        margin: 2rem 1rem;
+        padding: 2rem;
+    }
+}
